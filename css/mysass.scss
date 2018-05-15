@@ -1,0 +1,55 @@
+@import "preset";
+
+$mycolor: #d3a91f;
+$myfont: 100% Helvetica, sans-serif;
+$myspace: 10px;
+
+/*comment la shto*/
+body {
+    font: $myfont;
+    color: $mycolor;
+}
+
+ul {
+    list-style: none;
+        li {
+            margin: 0;
+            display: inline;
+        
+            a {
+                text-decoration: none;
+                color: $mycolor;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+}
+
+main {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    background: #e3be42;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: $myspace;
+    padding: $myspace;
+}
+
+div {
+    background: #797979;
+    padding: $myspace / 2;
+}
+
+footer, .myContainer {
+    @extend div;
+}
+
+.myCointainers {
+    color: #000;
+}
+
+footer {
+    padding: $myspace * 2;
+    margin-top: $myspace * 2;
+}
